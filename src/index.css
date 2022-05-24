@@ -3,8 +3,10 @@ html {
 }
 
 .box {
-  width: 700px;
-  height: 60vh;
+  width: 500px;
+  left: 0%;
+  height: 65vh;
+
   border: 3px solid lightgray;
   display: flex;
   flex-direction: column;
@@ -12,18 +14,17 @@ html {
   justify-content: center;
   position: absolute;
   top: 35%;
-  left: 35%;
   margin-top: -100px;
 }
 
 .container {
+  height: 50vh;
   background-color: lightgray;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 45vh;
   border: 10px;
   border-radius: 10px;
 }
@@ -39,11 +40,10 @@ html {
 }
 
 .guessInput {
-  margin-bottom: 5px;
+  width: 70vw;
+   margin-bottom: 5px;
   height: 3vh;
-  width: 30vw;
 }
-
 .submitButton {
   margin-right: 5px;
   margin-bottom: 5px;
@@ -105,21 +105,24 @@ html {
   cursor: pointer;
 }
 
+.attempts p {
+  margin-left: 3px;
+}
 .attempts {
-  margin-top: 10px;
+  height: 5vh;
+  width: 35vw;
+  padding: 3px;margin-top: 10px;
   background-color: #24a0ed;
   border: 10px;
   border-radius: 10px;
   color: white;
-  height: 5vh;
-  width: 30vw;
   text-align: left;
   text-decoration: none;
   display: inline-block;
 }
 
-.attempts p {
-  margin-left: 3px;
+.bg-danger p {
+  margin-top: 6px;
 }
 
 .bg-danger {
@@ -136,6 +139,10 @@ html {
   display: inline-block;
 }
 
+.bg-info p {
+  margin-top: 6px;
+}
+ 
 .bg-info {
   padding: 3px;
   margin-top: 3px;
@@ -176,9 +183,183 @@ html {
   display: inline-block;
 }
 
-@media all and (max-width: 1000px){
-  .box{
-    width: 500px;
-    left: 25%;
+@media screen and (min-width: 720px) {
+  html {
+    font-family: sans-serif;
   }
+  
+  .box {
+    width: 700px;
+    height: 60vh;
+    border: 3px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    margin-top: -100px;
+  }
+  
+  .container {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 45vh;
+    border: 10px;
+    border-radius: 10px;
+  }
+  
+  .bottomLine {
+    border-bottom: 1px solid rgb(184, 182, 182);
+  }
+  
+  .inputTitle {
+    margin-bottom: 0;
+    padding: 3px;
+    font-size: 16px;
+  }
+  
+  .guessInput {
+    margin-bottom: 5px;
+    height: 3vh;
+    width: 30vw;
+  }
+  
+  .submitButton {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .clearButton {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .resetButton {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .newGameButton {
+    margin-top: 5px;
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .attempts {
+    margin-top: 10px;
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .attempts p {
+    margin-left: 3px;
+  }
+  
+  .bg-danger {
+    padding: 3px;
+    margin-bottom: 3px;
+    background-color: #f44336;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bg-info {
+    padding: 3px;
+    margin-top: 3px;
+    background-color: lightseagreen;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bg-success {
+    padding: 3px;
+    background-color: #009900;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bg-warning {
+    padding: 3px;
+    background-color: yellow;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
 }

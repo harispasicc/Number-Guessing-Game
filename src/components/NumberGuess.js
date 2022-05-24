@@ -14,6 +14,7 @@ function NumberGuess() {
   const [low, setLow] = useState("");
   const [high, setHigh] = useState("");
   const [gameOverMessage, setGameOverMessage] = useState("");
+  const [alreadyChosenMsg, setAlreadyChosenMsg] = useState("");
 
   const handlerValueChange = e => {
     setUserGuess(e.target.value);
@@ -37,8 +38,14 @@ function NumberGuess() {
     } else if (number > userGuess) {
       setLow("UPS! Last guess was to low!");
     }
+    const res = guesses.includes(userGuess);
+
+    if (res) {
+      setAlreadyChosenMsg("You have already entered this number! Try again!");
+    } else {
+      setGuesses([...guesses, userGuess]);
+    }
     setCount(count - 1);
-    setGuesses([...guesses, userGuess]);
   };
 
   const startAgain = () => {
@@ -51,6 +58,7 @@ function NumberGuess() {
     setHigh("");
     setLow("");
     setGameOverMessage("");
+    setAlreadyChosenMsg("");
   };
 
   const clearHandler = () => {
@@ -67,6 +75,7 @@ function NumberGuess() {
     setHigh("");
     setLow("");
     setGameOverMessage("");
+    setAlreadyChosenMsg("");
   };
 
   setTimeout(() => {
@@ -74,6 +83,7 @@ function NumberGuess() {
     setHigh(false);
     setLow(false);
     setMessageSuccess(false);
+    setAlreadyChosenMsg(false);
   }, 6000);
 
   return (
@@ -137,6 +147,7 @@ function NumberGuess() {
         )}
         {messageSuccess && <p className="bg-success">{messageSuccess}</p>}
         {gameOverMessage && <p className="bg-warning">{gameOverMessage}</p>}
+        {alreadyChosenMsg && <p className="bg-warning">{alreadyChosenMsg}</p>}
         {high && (
           <div className="bg-danger">
             <p>{high}</p>
