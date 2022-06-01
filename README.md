@@ -1,3 +1,20 @@
+Number Guessing Game Project
+
+Project Description
+
+Number Guessing Game is online guessing game in range from 1 to 100, with 10 attempts. Game containes messages if you low from the random number, and if you go above it will display high guess. User can not submit empty input, also user can not submit same number twice.
+
+Project Features:
+
+-NumberGuess: Contains main logic, buttons, messages.
+
+Built With:
+
+-HTML
+-CSS
+-JS
+-React JS
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

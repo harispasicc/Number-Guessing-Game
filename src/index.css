@@ -1,12 +1,12 @@
+/*Mobile*/
 html {
   font-family: sans-serif;
 }
 
 .box {
-  width: 500px;
+  width: 380px;
   left: 0%;
   height: 65vh;
-
   border: 3px solid lightgray;
   display: flex;
   flex-direction: column;
@@ -16,6 +16,7 @@ html {
   top: 35%;
   margin-top: -100px;
 }
+
 
 .container {
   height: 50vh;
@@ -40,7 +41,7 @@ html {
 }
 
 .guessInput {
-  width: 70vw;
+  width: 80vw;
    margin-bottom: 5px;
   height: 3vh;
 }
@@ -107,11 +108,13 @@ html {
 
 .attempts p {
   margin-left: 3px;
+  margin-top: 3px;
 }
 .attempts {
   height: 5vh;
-  width: 35vw;
-  padding: 3px;margin-top: 10px;
+  width: 80vw;
+  padding: 3px;
+  margin-top: 10px;
   background-color: #24a0ed;
   border: 10px;
   border-radius: 10px;
@@ -126,13 +129,14 @@ html {
 }
 
 .bg-danger {
+  margin-top: 3px;
   padding: 3px;
   margin-bottom: 3px;
   background-color: #f44336;
   border: 10px;
   border-radius: 10px;
   color: black;
-  height: 5vh;
+  height: 7vh;
   width: 30vw;
   text-align: left;
   text-decoration: none;
@@ -150,7 +154,7 @@ html {
   border: 10px;
   border-radius: 10px;
   color: black;
-  height: 5vh;
+  height: 7vh;
   width: 30vw;
   text-align: left;
   text-decoration: none;
@@ -163,7 +167,7 @@ html {
   border: 10px;
   border-radius: 10px;
   color: black;
-  height: 5vh;
+  height: 7vh;
   width: 30vw;
   text-align: left;
   text-decoration: none;
@@ -176,14 +180,193 @@ html {
   border: 10px;
   border-radius: 10px;
   color: black;
-  height: 5vh;
+  height: 10vh;
   width: 30vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 
-@media screen and (min-width: 720px) {
+/*Tablet*/
+@media (min-width:600px)  {
+  .box {
+    width: 500px;
+    height: 60vh;
+    border: 3px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    margin-top: -100px;
+  }
+  
+  .container {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 45vh;
+    border: 10px;
+    border-radius: 10px;
+  }
+  
+  .bottomLine {
+    border-bottom: 1px solid rgb(184, 182, 182);
+  }
+  
+  .inputTitle {
+    margin-bottom: 0;
+    padding: 3px;
+    font-size: 16px;
+  }
+  
+  .guessInput {
+    margin-bottom: 5px;
+    height: 3vh;
+    width: 40vw;
+  }
+  
+  .submitButton {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .clearButton {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .resetButton {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .newGameButton {
+    margin-top: 5px;
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .attempts {
+    margin-top: 10px;
+    background-color: #24a0ed;
+    border: 10px;
+    border-radius: 10px;
+    color: white;
+    height: 5vh;
+    width: 40vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .attempts p {
+    margin-left: 3px;
+  }
+  
+  .bg-danger {
+    padding: 3px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: #f44336;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bg-info {
+    padding: 3px;
+    margin-top: 3px;
+    background-color: lightseagreen;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bg-success {
+    padding: 3px;
+    background-color: #009900;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .bg-warning {
+    padding: 3px;
+    background-color: yellow;
+    border: 10px;
+    border-radius: 10px;
+    color: black;
+    height: 5vh;
+    width: 30vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+/*Desktop*/
+@media  (min-width: 1025px) {
   html {
     font-family: sans-serif;
   }
@@ -310,6 +493,7 @@ html {
   
   .bg-danger {
     padding: 3px;
+    margin-top: 3px;
     margin-bottom: 3px;
     background-color: #f44336;
     border: 10px;
