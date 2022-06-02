@@ -2,11 +2,15 @@ import React from "react";
 import { useState } from "react";
 import "../index.css";
 
+const randomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
 function NumberGuess() {
   const [userGuess, setUserGuess] = useState("");
   const [count, setCount] = useState(10);
   const [guesses, setGuesses] = useState([]);
-  const [number, setNumber] = useState("");
+  const [number, setNumber] = useState(randomNumber(1, 100));
   const [messageSuccess, setMessageSuccess] = useState("");
   const [disabled, setDisabled] = useState(false);
   const [low, setLow] = useState("");
@@ -20,10 +24,6 @@ function NumberGuess() {
     setUserGuess(e.target.value.replace(/[^\d]/, ""));
   };
 
-  const randomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  };
-
   const submitHandler = () => {
     if (+number === +userGuess) {
       setMessageSuccess("Congratulations! You got it right!");
@@ -31,6 +31,7 @@ function NumberGuess() {
       setLow("");
       setHigh("");
       setUserGuess("");
+
       setCount(count - 1);
     } else if (count === 1) {
       setGameOverMessage("GAME OVER!!!");
@@ -198,6 +199,7 @@ function NumberGuess() {
           </div>
         )}
       </div>
+      <p>{number}</p>
     </div>
   );
 }
