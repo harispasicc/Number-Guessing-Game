@@ -65,19 +65,25 @@ function NumberGuess() {
       setGuesses(guesses);
       setLow("");
       setEmptyInputMsg("You did not enter anything");
-      return;
-    }
-
-    if (userGuess < 1 || userGuess > 100) {
+    } else if (userGuess < 1 || userGuess > 100) {
       setUserGuess("");
       setHigh("");
       setLow("");
       setCount(count);
       setGuesses(guesses);
       setValidNumber("Please enter a valid number");
-      return;
     }
     setUserGuess("");
+
+    setTimeout(() => {
+      setGameOverMessage(false);
+      setHigh(false);
+      setLow(false);
+      setMessageSuccess(false);
+      setAlreadyChosenMsg(false);
+      setEmptyInputMsg(false);
+      setValidNumber(false);
+    }, 3000);
   };
 
   const startAgain = () => {
@@ -109,16 +115,6 @@ function NumberGuess() {
     setGameOverMessage("");
     setAlreadyChosenMsg("");
   };
-
-  setTimeout(() => {
-    setGameOverMessage(false);
-    setHigh(false);
-    setLow(false);
-    setMessageSuccess(false);
-    setAlreadyChosenMsg(false);
-    setEmptyInputMsg(false);
-    setValidNumber(false);
-  }, 6000);
 
   return (
     <div className="box">
@@ -199,7 +195,6 @@ function NumberGuess() {
           </div>
         )}
       </div>
-      <p>{number}</p>
     </div>
   );
 }
