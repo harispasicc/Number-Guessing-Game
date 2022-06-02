@@ -2,13 +2,11 @@ import React from "react";
 import { useState } from "react";
 import "../index.css";
 
-let randomNubmer = Math.floor(Math.random() * 100) + 1;
-
 function NumberGuess() {
   const [userGuess, setUserGuess] = useState("");
   const [count, setCount] = useState(10);
   const [guesses, setGuesses] = useState([]);
-  const [number, setNumber] = useState(randomNubmer);
+  const [number, setNumber] = useState("");
   const [messageSuccess, setMessageSuccess] = useState("");
   const [disabled, setDisabled] = useState(false);
   const [low, setLow] = useState("");
@@ -20,6 +18,10 @@ function NumberGuess() {
 
   const handlerValueChange = e => {
     setUserGuess(e.target.value.replace(/[^\d]/, ""));
+  };
+
+  const randomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
   const submitHandler = () => {
@@ -82,7 +84,7 @@ function NumberGuess() {
     setMessageSuccess("");
     setGuesses([]);
     setCount(10);
-    setNumber(randomNubmer);
+    setNumber(randomNumber(1, 100));
     setUserGuess("");
     setHigh("");
     setLow("");
@@ -99,7 +101,7 @@ function NumberGuess() {
     setMessageSuccess("");
     setGuesses([]);
     setCount(10);
-    setNumber(randomNubmer);
+    setNumber(randomNumber(1, 100));
     setUserGuess("");
     setHigh("");
     setLow("");
